@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class ProfileDto {
 
     public String firstName;
-    public String secondName;
+    public String lastName;
 
 }
