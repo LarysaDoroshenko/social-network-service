@@ -2,9 +2,7 @@ package com.project.network.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "profile")
@@ -12,9 +10,10 @@ import javax.persistence.Table;
 public class Profile {
 
     @Id
-    public String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
 
     public String firstName;
-    public String secondName;
+    public String lastName;
 
 }

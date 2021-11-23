@@ -2,8 +2,8 @@ POST http://localhost:8080/profile/create
 Content-Type: application/json
 
 {
-  "name": "Jane",
-  "surname": "Smith"
+  "firstName": "Jane",
+  "lastName": "Smith"
 }
 
 ###

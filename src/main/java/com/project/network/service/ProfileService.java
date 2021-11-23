@@ -6,8 +6,6 @@ import com.project.network.repository.ProfileRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
-
 @Service
 @RequiredArgsConstructor
 public class ProfileService {
@@ -16,9 +14,8 @@ public class ProfileService {
 
     public ProfileDto create(ProfileDto request) {
         Profile profile = new Profile();
-        profile.setId(UUID.randomUUID().toString());
         profile.setFirstName(request.firstName);
-        profile.setSecondName(request.secondName);
+        profile.setLastName(request.lastName);
         profileRepository.save(profile);
         return request;
     }
